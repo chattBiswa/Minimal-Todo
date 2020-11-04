@@ -13,14 +13,6 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: Gradle@2
-  inputs:
-    gradleWrapperFile: 'gradlew'
-    tasks: 'cyclonedxBom'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    sonarQubeRunAnalysis: false
 
 - task: Gradle@2
   inputs:
